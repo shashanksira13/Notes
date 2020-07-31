@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+%to add clickable hyperlink reference 
+\usepackage{hyperref}
+%to decrease the size of the margins. It is automatically applied 
+\usepackage{fullpage}
+%the fullpage package still leaves a lot of space at the top and the bottom, we can use geometry package, it gives more control. have 1 inch margin is a standard
+%\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+%another way- In this we add a reference point
+%\usepackage[margin=1in,paperwidth=8.5in,paperheight=11in]{geometry}
+
+
+%Add some text formatting
+\usepackage{amsfonts}
+
+
+%This is called macros, it is used when we have to use one particular thing several times
+\def\eq1{y=\frac{x}{3x^2+x+1}}
+
+\def\labelaxes{Remember to include a scale and label your axes}
+
+%to use graphics like adding an image
+\usepackage{graphicx}
+
+%Add titles
+%The backslash after the \LaTeX'\' is used to add space
+\title{My \LaTeX\ Document}
+\author{Shashank}
+\date{\today}
+%You can add anything in the date section not just necessarily a date
+
+\begin{document}
+%to add table of contents..
+%it requires to build two times
+\tableofcontents
+
+%to add the title author and date
+\maketitle
+
+
+This will produce \textit{italicized} text.
+This will produde \textbf{bold face} text.
+This will produce \textsc{small caps} text.
+This will produce \texttt{typewriter font} text.
+%typewriter font is monospaced so can be used for url and stuff.
+Please visit Shashank's website at \url{http://michellekrummel.com}.
+
+Another way to add the clickable hyperlink reference is \href{http://michellekrummel.com}{My website}.
+
+\vspace{1cm}
+Changing the text size
+
+Please excuse my \begin{tiny}aunt Sally. \end{tiny}
+
+Please excuse my \begin{scriptsize}aunt Sally. \end{scriptsize}
+
+Please excuse my \begin{small}aunt Sally. \end{small}
+
+Please excuse my \begin{normalsize}dear aunt Sally. \end{normalsize} 
+
+Please excuse my dear aunt Sally.
+
+Please excuse my \begin{large}dear aunt Sally.
+\end{large} 
+
+Please excuse my \begin{Large}dear aunt Sally.
+\end{Large} 
+
+Please excuse my \begin{huge}dear aunt Sally.
+\end{huge} 
+
+Please excuse my \begin{Huge}dear aunt Sally.
+\end{Huge} 
+
+
+\vspace{1cm}
+\begin{center}This line is centered\end{center}
+
+\begin{flushleft}
+This line is left-justified
+\end{flushleft}
+
+\begin{flushright}
+This line is right-justified
+\end{flushright}
+
+%If we use \centering then everything after that is affected same goes for \Large 
+\Large
+This line is centered.\\
+This line is centered again
+%Use \section*{sdfd} to not number it
+\section*{Linear Functions}
+	\subsection*{Slope-Intercept Form}
+		\subsubsection*{Example1:}
+		\subsubsection{Exmaple2:}
+	\subsection{Standard Form}
+	\subsection{Point-Slope Form}
+\section*{Quadratic Functions}
+	\subsection{Vertex Form}
+	\subsection{Standard Form}
+\section{Quadratic Functions}
+	\subsection{Vertex Form}
+	\subsection{Standard Form}
+
+\vspace{1in}
+
+Use of packages
+
+The set of the Natural numbers is denoted by
+$\mathbb{N}$.
+
+The set of Integers is denoted by $\mathbb{Z}$
+
+The set of Real numbers is denoted by $\mathbb{R}$
+
+\vspace{1in}
+
+Use of macros
+
+Graph $\eq1$
+
+Identify the aymptotes for the graph of $eq1$
+
+\labelaxes
+
+\vspace{1in}
+Working with garphics
+
+image has to be saved in the same image as the latex file
+we can only use .png .jpg , .gif or .pdf files
+names should not have spaces
+jpeg files are written as jpg
+
+
+%image has to be saved in the same image as the latex file
+% we can only use .png .jpg , .gif or .pdf files
+% names should not have spaces
+% jpeg files are written as jpg
+\includegraphics[scale=0.1]{iron_throne.jpg}
+%scaling is relative
+\includegraphics[width=2in]{iron_throne.jpg}\\
+\begin{center}
+\includegraphics[width=2in]{iron_throne.jpg}
+\end{center}
+\begin{center}
+\includegraphics[width=2in,angle=45]{iron_throne.jpg}
+\end{center}
+
+\vspace{1in}
+Advices for debuggin and error
+
+use line numbers
+
+go line by line
+
+use $\left( with \right)$
+
+make sure of all brackets and \$ and enumerate are closed
+
+Search messages of the error on google if you cant solve the error
+
+\vspace{1in}
+
+tips for texmaker
+
+you can use an external pdf viewer from configure texmaker
+
+you add various types of symbols from the tray that opens on the left when you click on the structures tab from lower left corner 
+
+you can also choose from comands from the left array in the default mode, when the structure is off and also from the latex and the math menu
+
+while making a new file we can choose quick start from wizard to make your life easy
+
+you can create a table and array form quick tabular or array from wizard
+
+we can also create user tags from user just like macros but we cannot create already used tags like title
+
+you can use latex reference and user from help
+
+
+\end{document}

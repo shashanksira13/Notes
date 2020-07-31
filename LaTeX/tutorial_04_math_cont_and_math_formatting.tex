@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.75in,paperwidth=8.5in,paperheight=11in]{geometry}
+
+%packages for math papers
+\usepackage{amsmath,amsfonts,amssymb}
+%to prevent latex form using hyphenated words
+\usepackage[none]{hyphenat}
+%for title page to have a custom header and footer
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+%to clear the default header and footer
+\fancyhead{}
+\fancyfoot{}
+%To have make new header
+%[L] means left aligned
+\fancyhead[L]{\textit{\MakeUppercase{My Title will come here}}}
+\fancyhead[R]{\textit{\MakeUppercase{Shashank}}}
+%to add the page number of the page
+\fancyfoot[C]{\thepage}
+%to remove the horizontal line
+%\renewcommand{\headrulewidth}{0pt}
+%you can also create or remove line in header and footer
+%\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{graphicx}
+\usepackage{float}
+%to remove indentation
+%\parindent 0ex
+%to change the width of the indent
+%\setlength{\parindent}{4em}
+%to change the amount of space between paragraphs
+%\setlength{\parskip}{1em}
+%to change the line spacing(space between lines) of paragraphs
+\renewcommand{\baselinestretch}{1.5}
+
+%to add table of contents
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+\begin{document}
+
+
+The function $f(x) = (x-3)^2+ \frac{1}{2}$ has domain $ \mathrm{D}_f:(-\infty,\infty)$
+%Here \mathrm is used to unitalicize D
+and range $\mathrm{R}_f:\left[\frac{1}{2},\infty\right)$
+
+\vspace{1in}
+limits:
+
+%\to is for arrow
+$\lim_{x\to a}$
+
+$\lim\limits_{x\to a^+}f(x)$
+
+$\lim\limits_{x \to a} \frac{f(x)-f(a)}{x-1} = f'(a)$
+
+%to have proper sizing
+$\displaystyle{\lim\limits_{x \to a} \frac{f(x)-f(a)}{x-1} = f'(a)}$
+
+$\int \sin x dx$
+
+$\int \sin x \,dx = -\cos x +c $ 
+%\, forces a space
+
+%to control the size of integral
+$\displaystyle{\int \sin x \,dx = -\cos x +c }$
+
+one way: $\int_a^b$
+
+another way: $\int\limits_a^b$
+
+$\displaystyle{\int_a^b}$
+
+$\displaystyle{\int\limits_a^b}$
+
+$\displaystyle{\int\limits_{2a}^{3b}x^2 \,dx = \left[\frac{x^3}{3}\right]_{2a}^{3b}}$
+
+\vspace{1in}
+Summation notation
+
+$\sum$
+
+$\displaystyle{\sum\limits_{n=1}^{\infty} ar^n = a + ar + \cdots + ar^n}$
+%\cdot mean single dot and cdots means three dots
+$\displaystyle{\int_a^b f(x) \,dx = \lim\limits_{x \to \infty} \sum\limits_{k=1}^{n} f(x,k) \cdot \Delta x}$
+%\delta means small delta and Delta means capital delta
+
+\vspace{1in}
+vector notation
+
+$\vec{v}=v_1 \vec{i}+v_2\vec{i} = \langle v_1,v_2 \rangle$
+
+\vspace{1in}
+creating a math paper
+
+It should include:
+\begin{itemize}
+\item title page
+\item table of contents
+\item section and subsections
+\item footnotes
+\item citations
+\item biblography
+\end{itemize}
+
+\begin{titlepage}
+\begin{center}
+\vspace{1in}
+\Large\textbf{Latex practice}\\
+\Large\textbf{Just and exercise}\\
+%vfil is IMPORTANT
+%automatically adjusts the space between the two items and this space keeps decreasing as the the lower text keeps increasing
+\vfil
+\line(1,0){400}\\[1mm]
+\huge{\textbf{Use of vfil is important}}\\[3mm]
+\Large{\textbf{This is sampel sub title}}\\[1mm]
+\line(1,0){400}\\
+%as the text is very low we can add more space below the title using vfil
+\vfil
+By Shashank\\
+Candidate \\
+\today
+
+\end{center}
+\end{titlepage}
+
+%compline twice
+\tableofcontents
+%thispagestyle SHOULD COME BEFORE clear
+%to make the table of contents to line on a separate page
+\thispagestyle{empty}
+%to remove the header and footer on this page
+\clearpage
+
+%to change the page numbers as we want
+\setcounter{page}{1}
+
+
+
+\section{Introduction}
+\section{Scoring Criteria}
+\subsection{Communication}
+\subsection{Mathematical Presentation}
+\subsection{Personal Engagement}
+\subsection{Reflection}
+\subsection{Use of Mathematics}
+\section{Conclusion}
+\section{\LaTeX}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}\hline
+x & 1 \\ \hline
+2 & 3\\ \hline
+
+\end{tabular}
+%label for reference
+\label{tab:data1}
+\caption{Caption goes here}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{iron_throne}
+\label{fig:data2}
+\caption{Caption goes here}
+
+
+\end{figure}
+%this will add a footnote
+I'll be adding a footnote here. \footnote{An exmaple footnote}
+
+%This will add a refernce to a label figure
+I'll abe adding a reference here. See table \ref{tab:data1}
+
+%This will add a refernce to a label to a figure
+I'll abe adding a reference here. See figure \ref{fig:data2}
+
+%This will add a citation
+I'll abe adding a citation here \cite{first}.
+
+\pagebreak
+
+
+
+Now we'll work on bibliography
+
+
+\begin{thebibliography}	
+\bibitem{first}
+Shashank, singh
+``high school.''
+\textit{practice}
+web 27 2015
+
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+\end{document}
